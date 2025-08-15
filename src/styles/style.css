@@ -1,0 +1,509 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter";
+}
+
+.principal {
+  max-width: 1200px;
+  margin: 0 auto;    
+  padding: 0 2rem;   
+}
+
+header {
+  font-size: 10px;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 3%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    /* background-color: #13131d; */
+    /* box-shadow: 0x 15px 16px -7px rgba(0, 0, 0, 1); */
+
+    .logo {
+      img {
+        width: 150px;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .nav-items {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      list-style: none;
+      border-radius: 24px;
+      padding: 10px 22px;
+      cursor: pointer;      
+
+      &.open {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: white;
+        z-index: 2;
+      }
+      
+      
+    }
+
+    .btn-default {
+      border-radius: 24px;
+      padding: 10px 22px;
+      cursor: pointer;
+      background-color: #BCCF03;
+      border: none;
+      font-weight: 500;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #5a3dc8;
+      }
+
+    }
+
+
+    .btn-mobile {
+      display: none;
+      background-color: transparent;
+      font-size: 20px;
+      color: black;
+      border: none;
+      cursor: pointer;
+      z-index: 3;
+    }
+
+
+    @media screen and (max-width: 768px) {
+      .btn-mobile {
+        display: block;
+      }
+
+      .principal {
+          margin: 0;
+          padding: 0;
+      }
+
+      .titulo {
+        font-size: 12px;
+      }
+
+      .nav-items {
+        display: none;
+
+        &.open {
+          display: flex; 
+        }
+      }
+
+    }    
+
+  }
+}
+
+
+
+
+.nav-item {
+  .nav-link {
+    text-decoration: none;
+    font-size: 14px;
+    color: #050505;
+    padding: 4px 0px;
+    border-radius: 24px;
+    padding: 10px 22px;
+    cursor: pointer;
+    border: none;    
+    text-align: center;
+    transition: color 0.3s;
+
+    &.active,
+    &:hover {
+      color: white;
+    background-color: #BCCF03;
+    }
+
+
+  }
+}
+
+.btn-area-restrita{
+    font-family: "Inter";
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: white;
+    border-radius: 24px;
+    padding: 10px 42px;
+    cursor: pointer;
+    border: none;    
+    text-align: center;
+    transition: color 0.3s;
+    background-color: #BCCF03;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+
+    &.active,
+    &:hover {
+      color: white;
+    background-color: #312D5A;
+    }
+}
+
+.intro{
+  background-image: url('/assets/fundo1-home.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  /* background-attachment: fixed; */
+  height: 380px;
+  position: relative;
+}
+
+.assessor-tecnico {
+  background-image: url('/assets/fundo2-assessor-tecnico.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;  
+  /* background-attachment: fixed; */
+  /* background-position-y: 85px; */
+  height: 380px;
+  position: relative;    
+}
+
+.medico {
+  background-image: url('/assets/fundo3-medicos.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  height: 380px;
+  position: relative;    
+  background-position: top;
+}
+
+.medico-area-exclusiva {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.medicos-topicos {
+  list-style-position: inside;
+}
+
+.conteudo-nao-cadastrado p {
+  padding: 10px 0px;
+}
+
+.conteudo-nao-cadastrado a {
+    color: #312D5A;
+}
+
+.titulo {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: #312D5A;
+  font-size: 30px;
+}
+
+.titulo-assessor h1 {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: #312D5A;
+  font-size: 50px;
+  font-weight: 180;
+}
+
+.titulo-medico {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: #312D5A;
+  font-size: 30px;
+}
+
+.titulo h1{
+  font-weight: 400;
+}
+
+.subtitulo {
+  margin-top: 10px;
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 14px;
+
+}
+
+
+
+.funcionalidade-1 {
+  height: 190px;
+  text-align: center;
+  padding: 40px;
+  color: #312D5A;
+  line-height: 20px;
+  margin-top: 20px;
+  margin-bottom: 120px;
+}
+
+.medico-area-exclusiva-principal {
+  height: 490px;
+  text-align: center;
+  padding: 40px;
+  color: #312D5A;
+  line-height: 20px;
+  margin-top: 20px;
+  margin-bottom: 120px;
+}
+
+.intro-conteudo {
+  font-size: 14px;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.intro-conteudo h2 {
+  font-weight: 500;
+}
+
+.funcionalidade-2{
+  height: 380px ;
+  color: white;
+  font-weight: 200;
+  background-color: #312D5A;
+  padding-top: 60px;
+  line-height: 25px;
+  position: relative;
+}
+
+.func2img {
+  position: absolute;
+  top: -65px;
+  left: 70px;
+}
+
+.sec2titulo {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  margin-left: -20px;
+}
+
+.func-conteudo {
+  /* width: 600px; */
+  margin-right: 20px;
+  float: right;
+  padding-left: 20px;
+}
+
+.func-lista {
+  font-size: 12px;
+}
+
+footer{
+  display: flex;
+  margin-top: 1px;
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: #312D5A;
+  height: 460px;
+  color: white;
+  font-size: 12px;
+  line-height: 25px;
+  font-weight: 300;
+}
+
+.logo-rodape {
+  margin-left: -20px;
+}
+
+.footer-b1 {
+  width: 50%;
+  margin-left: 70px;
+  margin-top: 60px;
+}
+
+.icon-phone {
+display: flex;
+}
+
+.icon-phone {
+  background-image: url('/assets/icon-1-telefone.png');
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.icon-whatsapp {
+  background-image: url('/assets/icon-2-whatsapp.png');
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.icon-email {
+  background-image: url('/assets/icon-2-whatsapp.png');
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.icon-email {
+  background-image: url('/assets/icon-3-email.png');
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  margin-right: 10px;  
+}
+
+.whatsapp-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;   
+  color: white;
+}
+
+.whatsapp-text {
+  font-size: 12px;
+  white-space: nowrap; /* Impede que o texto quebre a linha */
+}
+
+/* (Opcional) Estilo para o ícone, caso precise de um tamanho específico */
+.whatsapp-container img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-b2 {
+  width: 50%;
+  text-align: right;
+  margin-right: 80px;
+  margin-top: 30px;
+}
+
+.contato-canais {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+      .btn-mobile {
+        display: block;
+      }
+
+      .principal {
+          margin: 0;
+          padding: 0;
+      }
+
+      .titulo {
+        font-size: 12px;
+        margin-top: 80px;
+      }
+
+      .funcionalidade-2{
+        height: 580px;
+        position: none;
+        padding-top: 20px;
+      }
+
+      .intro-conteudo {
+      width: 90%;
+      }
+
+      .func-conteudo {
+          width: 100%;
+          margin: 20px;
+          float: none;
+          padding-left: 40px;
+          padding-right: 40px;
+      }      
+
+      .func2img {
+      text-align: center;
+      position: static;
+      margin-top: 20px;
+      }
+
+      footer {
+          display: block;
+          margin-top: 1px;
+          padding-top: 20px;
+          padding-left: 5px;
+          background-color: #312D5A;
+          height: 660px;
+          color: white;
+          font-size: 12px;
+          line-height: 25px;
+          font-weight: 300;
+      }     
+      
+      .footer-b1 {
+        margin-left: 70px;
+        /* width: 100%; */
+      }
+
+      .footer-b2 {
+          width: 100%;
+          text-align: center;
+          margin-right: 0px;
+          margin-top: 30px;
+      }      
+
+    .titulo-assessor h1 {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        color: #312D5A;
+        font-size: 50px;
+        font-weight: 180;
+    }      
+
+  .medico-area-exclusiva-principal {
+      height: 510px;
+  }    
+
+  .titulo-medico {
+      top: 50%;
+      left: 30%;
+  }  
+
+  .intro-conteudo h2 {
+      line-height: 30px;
+  }  
+
+}   
